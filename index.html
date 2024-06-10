@@ -9,20 +9,25 @@
     <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-    <div class="first-container">
+    <div class="flex-container">
         <div class="title">SketchPad</div>
+        <div class="mode">Mode: Coloring</div>
         <div class="content">
             <div class="board"></div>
             <div class="buttons">
-                <button>Black</button>
-                <button>White</button>
-                <button>Random</button>
-                <button>Reset</button>
+                <button onclick ="changeColor('black')">Black</button>
+                <button onclick ="changeColor('white')">remove</button>
+                <button onclick ="changeColor('blue')">Blue</button>
+                <button onclick ="changeColor('random')">Random</button>
+                <button onclick ="reset()">Reset</button>
             </div>
             <div>
                 <input type="text" placeholder="Size of Board" value="16" 
                 onchange="changeSize(this.value)"/>
                 <button>Set size</button>
+            </div>
+            <div class="error">
+                Input must be between 2 and 100
             </div>
         </div>
 
